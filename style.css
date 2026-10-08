@@ -1,0 +1,197 @@
+/* Universal Base Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+/* Page Layout Container using CSS Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column fallback for mobile */
+    gap: 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- SIDEBAR PROFILE STYLES --- */
+.profile-sidebar {
+    background: #fff;
+    border: 1px solid #e1e4e6;
+    border-radius: 6px;
+    padding: 24px;
+    text-align: left;
+}
+
+.profile-avatar img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 50%; /* Circle image like academic pages */
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 1px solid #ddd;
+}
+
+.profile-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.profile-info .title {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.profile-info p i {
+    width: 20px;
+    color: #555;
+}
+
+.profile-info .affiliation, .profile-info .location {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* Sidebar Social Link List */
+.social-links {
+    list-style: none;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links li a {
+    text-decoration: none;
+    color: #49515f;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links li a:hover {
+    color: #4183c4;
+}
+
+/* --- MAIN CONTENT & NAVIGATION STYLES --- */
+.main-content {
+    background: #fff;
+    border: 1px solid #e1e4e6;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+/* Horizontal Top Navigation Bar */
+.top-nav {
+    border-bottom: 2px solid #f2f2f2;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    margin-right: 25px;
+    font-size: 1.05rem;
+    padding-bottom: 11px;
+}
+
+.top-nav a:hover, .top-nav a.active {
+    color: #4183c4;
+    border-bottom: 2px solid #4183c4;
+}
+
+/* Layout Content Sections */
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    color: #222;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Publication Styling Cards */
+.pub-card {
+    background: #fdfdfd;
+    border-left: 4px solid #4183c4;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.pub-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #111;
+}
+
+.pub-card .authors {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.pub-card .venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Minimalist Button Styling */
+.btn-sm {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.8rem;
+    color: #4183c4;
+    border: 1px solid #4183c4;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.btn-sm:hover {
+    background: #4183c4;
+    color: #fff;
+}
+
+/* --- RESPONSIBILITY QUERY: Desktop / Big Screens --- */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 280px 1fr; /* Triggers the 2-column sidebar layout */
+        padding: 40px 20px;
+    }
+    
+    .profile-sidebar {
+        position: sticky; /* Makes the sidebar lock cleanly in place on scroll */
+        top: 40px;
+        align-self: start;
+    }
+}
